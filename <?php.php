@@ -62,9 +62,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['name'], $_POST['email
         echo 'Thank you!';
         // you can use here the sanitized user input to send the e-mail
     }
-}
-
-if (count($errors) > 0) {
+}if (count($errors) > 0) {
     foreach ($errors as $field => $messages) {
         echo implode(', ', $messages), '<br>';
     }
